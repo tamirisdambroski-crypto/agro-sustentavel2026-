@@ -1,0 +1,309 @@
+/* DESIGN SYSTEM - SLIDES AGRO */
+:root {
+    --primary-green: #1B5E20;
+    --secondary-green: #4CAF50;
+    --accent-yellow: #FBC02D;
+    --bg-cream: #F9FBF9;
+    --text-dark: #2C3E50;
+    --text-light: #F1F8E9;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #E8F5E9;
+    font-family: 'Lato', sans-serif;
+    color: var(--text-dark);
+}
+
+/* Estrutura de Slides em Tela Cheia */
+.slide-container {
+    background-color: var(--bg-cream);
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+    position: relative;
+    border-bottom: 4px solid #dcdfdc;
+}
+
+/* Títulos dos Slides */
+.slide-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    color: var(--primary-green);
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%;
+    max-width: 1160px;
+    border-left: 8px solid var(--secondary-green);
+    padding-left: 20px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 64px;
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--primary-green);
+}
+
+.subtitle {
+    font-size: 24px;
+    color: var(--secondary-green);
+    margin-top: 10px;
+}
+
+.divider {
+    margin-top: 40px;
+    border-top: 2px solid #ddd;
+    padding-top: 20px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+/* Alinhamento de Conteúdo */
+.content-area {
+    width: 100%;
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    width: 100%;
+}
+
+/* Moldura para Imagens */
+.image-wrapper {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Layout de Blocos Laterais (Grid da FAEP) */
+.tiled-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+.tile {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-bottom: 5px solid var(--secondary-green);
+    transition: var(--transition);
+}
+
+.tile:hover {
+    transform: translateY(-5px);
+}
+
+.tile .icon {
+    font-size: 40px;
+    color: var(--secondary-green);
+    margin-bottom: 20px;
+}
+
+.tile h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-green);
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Layout de Imagem Sangrada (Slide 5) */
+.bleed-image-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 !important;
+}
+
+.bleed-image-layout .content-container {
+    padding: 80px 60px;
+}
+
+.bleed-image-layout .image-container {
+    height: 100%;
+    min-height: 100vh;
+}
+
+.bleed-image-side {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Listas do Slide */
+.slide-list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.slide-list li {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.slide-list i {
+    color: var(--secondary-green);
+    margin-right: 10px;
+}
+
+/* Barras de Gráficos Tecnológicos */
+.bar-container {
+    width: 100%;
+    margin-top: 25px;
+}
+
+.bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.bar-label {
+    width: 220px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.bar-outer {
+    flex-grow: 1;
+    background: #e0e0e0;
+    height: 35px;
+    border-radius: 17px;
+    overflow: hidden;
+}
+
+.bar-inner {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-green), var(--secondary-green));
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Tabelas de Dados */
+.table-layout table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.table-layout th {
+    background-color: var(--primary-green);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    font-size: 22px;
+}
+
+.table-layout td {
+    padding: 18px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 19px;
+}
+
+/* Visual do Quiz */
+.quiz-card {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.quiz-question {
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: var(--primary-green);
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quiz-btn {
+    background: var(--bg-cream);
+    border: 2px solid #E8F5E9;
+    padding: 18px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    transition: var(--transition);
+}
+
+.quiz-btn:hover {
+    background: #E8F5E9;
+    border-color: var(--secondary-green);
+}
+
+.quiz-btn.correct {
+    background: #C8E6C9 !important;
+    border-color: #2E7D32 !important;
+    color: #1B5E20 !important;
+    font-weight: bold;
+}
+
+.quiz-btn.wrong {
+    background: #FFCDD2 !important;
+    border-color: #C62828 !important;
+    color: #B71C1C !important;
+}
+
+.quiz-feedback {
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    min-height: 30px;
+}
+
+/* Caixa de Encerramento */
+.footer-box {
+    margin-top: 50px;
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 15px;
+    display: inline-block;
+}
